@@ -5,10 +5,10 @@ files:
     destination: /var/www/html/
 hooks:
   BeforeInstall:
-    - location: service httpd stop
+    - location: scripts/stopserver
       timeout: 300
       runas: root
   AfterInstall:
-    - location: service httpd start
+    - location: scripts/startserver
       timeout: 300
       runas: root
